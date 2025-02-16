@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 17, 24, 39;
+  --background-end-rgb: 88, 28, 135;
+}
+
+body {
+  @apply bg-[#0A0118] text-white min-h-screen;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10
+    hover:border-purple-500/50 rounded-xl transition-all duration-300;
+  }
+
+  .nav-link {
+    @apply text-gray-300 hover:text-white px-4 py-2 rounded-lg
+    transition-all duration-300 hover:bg-purple-500/10;
+  }
+
+  .hero-gradient {
+    @apply animate-gradient bg-gradient-to-r from-purple-400 via-pink-500 to-purple-600
+    bg-clip-text text-transparent;
+  }
+}

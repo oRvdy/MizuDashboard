@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 17, 24, 39;
+  --background-end-rgb: 88, 28, 135;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+    to bottom right,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-end-rgb))
+  );
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.logo-glow {
+  filter: drop-shadow(0 0 8px rgba(168, 85, 247, 0.4));
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* SweetAlert2 Customization */
+.swal2-popup {
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+
+.swal2-confirm {
+  @apply bg-red-600 hover:bg-red-700 focus:ring-red-500 !important;
+}
+
+.swal2-cancel {
+  @apply bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 !important;
+}
+
+.swal2-title, .swal2-html-container {
+  text-align: center !important;
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600;
+  }
+}
